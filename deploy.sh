@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "🚀 Starting Odoo 19 Production Deployment..."
+echo "🚀 Starting Odoo 18 Production Deployment..."
 
 # Check prerequisites
 command -v docker >/dev/null 2>&1 || { echo "❌ Docker is required but not installed."; exit 1; }
@@ -46,7 +46,7 @@ if [ $elapsed -ge $timeout ]; then
     exit 1
 fi
 
-echo "🎉 Odoo 19 is ready!"
+echo "🎉 Odoo 18 is ready!"
 echo "🌐 Access: http://localhost:${ODOO_PORT:-8069}"
 if [ "$response" = "500" ]; then
     echo "📝 First time setup: Create your database via the web interface"

@@ -1,4 +1,4 @@
-# Odoo 19 Community Docker Setup
+# Odoo 18 Community Docker Setup
 
 ## Quick Start
 
@@ -11,62 +11,55 @@
 ## Folder Structure
 
 - `config/` → Odoo configuration files (production-optimized)
-- `addons/custom/` → Your custom addons
-- `addons/oca/` → OCA community addons
+- `addons/` → Módulos disponíveis para instalação
 - `data/` → Persistent database data (Docker volumes)
 
-## OCA Addons Installed
+## Available Modules
 
-✅ **Base Infrastructure:**
-- server-tools
-- web
-- server-ux
+This installation includes over 700 modules organized in the following categories:
 
-✅ **CRM & Sales:**
-- crm
-- sale-workflow
+**📊 Accounting & Finance:**
+Complete accounting management, electronic invoicing, payments, taxes, financial analysis, fiscal reports
 
-✅ **Project Management:**
-- project
+**🛒 Sales & CRM:**
+Sales management, customer relationship, quotations, commercial proposals, subscription sales, loyalty programs
 
-✅ **Human Resources:**
-- hr
+**📦 Inventory & Logistics:**
+Stock control, warehouse management, shipping, barcodes, lot tracking and expiration, landed costs
 
-✅ **Finance & Accounting:**
-- account-financial-tools
-- account-invoicing
-- account-payment
-- account-analytic
+**👥 Human Resources:**
+Employees, recruitment, leaves, expenses, attendance, skills, timesheets, absence management
 
-✅ **Purchase & Workflow:**
-- purchase-workflow
+**🏭 Manufacturing (MRP):**
+Production, manufacturing orders, subcontracting, bill of materials, repairs, production costs
 
-✅ **Portuguese (Brazil) Localization:**
-- l10n-brazil
+**🛍️ E-commerce & Website:**
+Online store, blog, events, forum, landing pages, SEO, online payments
 
-## Custom Addons Installed
+**📅 Projects & Tasks:**
+Project management, timesheets, tasks, Kanban, Gantt, hourly billing
 
-✅ **UI/UX:**
-- muk_web_theme
+**💬 Communication:**
+Live chat, email marketing, SMS, Google/Microsoft integrations, notifications
 
-## Post-Setup Actions Required
+**📍 Point of Sale (POS):**
+Point of sale, offline sales, hardware integrations, restaurants, self-order
 
-1. **Activate Developer Mode** in Odoo
-2. **Update Apps List** (Apps → Update Apps List)
-3. **Install Portuguese (Brazil)** language:
-   - Settings → Translations → Languages
-   - Install Portuguese (Brazil)
-4. **Install required modules** selectively (avoid installing everything)
+**🌍 Localizations:**
+Over 100 countries supported including Brazil, Argentina, Mexico, Portugal, United States, European, Asian and African countries
+
+**🎨 Themes & Interface:**
+MUK custom themes (muk_web_theme, muk_web_chatter, muk_web_colors, muk_web_appsbar)
 
 ## Development Workflow
 
-- Place custom addons in `addons/custom/`
-- Place OCA addons in `addons/oca/`
-- Restart Odoo after adding new addons: `docker compose restart odoo`
+- Restart Odoo after configuration changes: `docker compose restart odoo`
+- View logs: `docker compose logs -f odoo`
 
 ## Deployment
 
 For automated production deployment:
+
 ```bash
 ./deploy.sh
 ```

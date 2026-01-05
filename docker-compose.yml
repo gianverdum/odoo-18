@@ -29,7 +29,7 @@ services:
     restart: unless-stopped
 
   odoo-init:
-    image: odoo:19.0
+    image: odoo:18.0
     container_name: odoo-init
     networks: [odoo-net]
     depends_on:
@@ -54,7 +54,7 @@ services:
     restart: "no"
 
   odoo:
-    image: odoo:19.0
+    image: odoo:18.0
     container_name: odoo-app
     networks: [odoo-net]
     depends_on:
