@@ -1,0 +1,28 @@
+# Environment variables
+.env
+
+# Database data
+data/
+
+# Logs
+*.log
+
+# Docker volumes
+docker-compose.override.yml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Backup files
+*.bak
+*.backup
