@@ -62,6 +62,7 @@ services:
       - odoo-init
     ports:
       - "${ODOO_PORT:-8069}:8069"
+      - "8072:8072"
     environment:
       HOST: ${DB_HOST:-db}
       PORT: ${DB_PORT:-5432}
